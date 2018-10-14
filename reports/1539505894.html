@@ -1,0 +1,1473 @@
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> - TestReport</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      color: #333;
+      margin: 0 auto;
+      width: 960px;
+    }
+    #summary {
+      width: 960px;
+      margin-bottom: 20px;
+    }
+    #summary th {
+      background-color: skyblue;
+      padding: 5px 12px;
+    }
+    #summary td {
+      background-color: lightblue;
+      text-align: center;
+      padding: 4px 8px;
+    }
+    .details {
+      width: 960px;
+      margin-bottom: 20px;
+    }
+    .details th {
+      background-color: skyblue;
+      padding: 5px 12px;
+    }
+    .details tr .passed {
+      background-color: lightgreen;
+    }
+    .details tr .failed {
+      background-color: red;
+    }
+    .details tr .unchecked {
+      background-color: gray;
+    }
+    .details td {
+      background-color: lightblue;
+      padding: 5px 12px;
+    }
+    .details .detail {
+      background-color: lightgrey;
+      font-size: smaller;
+      padding: 5px 10px;
+      text-align: center;
+    }
+    .details .success {
+      background-color: greenyellow;
+    }
+    .details .error {
+      background-color: red;
+    }
+    .details .failure {
+      background-color: salmon;
+    }
+    .details .skipped {
+      background-color: gray;
+    }
+
+    .button {
+      font-size: 1em;
+      padding: 6px;
+      width: 4em;
+      text-align: center;
+      background-color: #06d85f;
+      border-radius: 20px/50px;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+    }
+    a.button{
+      color: gray;
+      text-decoration: none;
+    }
+    .button:hover {
+      background: #2cffbd;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      transition: opacity 500ms;
+      visibility: hidden;
+      opacity: 0;
+    }
+    .overlay:target {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .popup {
+      margin: 70px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      width: 50%;
+      position: relative;
+      transition: all 3s ease-in-out;
+    }
+
+    .popup h2 {
+      margin-top: 0;
+      color: #333;
+      font-family: Tahoma, Arial, sans-serif;
+    }
+    .popup .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      transition: all 200ms;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #333;
+    }
+    .popup .close:hover {
+      color: #06d85f;
+    }
+    .popup .content {
+      max-height: 80%;
+      overflow: auto;
+      text-align: left;
+    }
+
+    @media screen and (max-width: 700px) {
+      .box {
+        width: 70%;
+      }
+      .popup {
+        width: 70%;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Test Report: </h1>
+
+  <h2>Summary</h2>
+  <table id="summary">
+
+    <tr>
+      <th>START AT</th>
+      <td colspan="4">2018-10-14 16:31:34</td>
+    </tr>
+    <tr>
+      <th>DURATION</th>
+      <td colspan="4">0.756 seconds</td>
+    </tr>
+    <tr>
+      <th>PLATFORM</th>
+      <td>HttpRunner 1.5.13 </td>
+      <td>CPython 3.5.2 </td>
+      <td colspan="2">Windows-7-6.1.7601-SP1</td>
+    </tr>
+    <tr>
+      <th>TOTAL</th>
+      <th>SUCCESS</th>
+      <th>FAILED</th>
+      <th>ERROR</th>
+      <th>SKIPPED</th>
+      <!-- <th>ExpectedFailure</th>
+      <th>UnexpectedSuccess</th> -->
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <!-- <td>0</td>
+      <td>0</td> -->
+    </tr>
+  </table>
+
+  <h2>Details</h2>
+
+  
+  
+  <h3>testset description</h3>
+  <table id="suite_1" class="details">
+    <tr>
+      <th>base_url</th>
+      <td colspan="2">http://api.chumanapp.com</td>
+      <th colspan="2" class="detail">
+        <a class="button" href="#suite_output_1">parameters & output</a>
+        <div id="suite_output_1" class="overlay">
+            <div class="popup">
+                <h2>Parameters and Output</h2>
+                <a class="close" href="#suite_1">&times;</a>
+                <div class="content">
+                  <div style="overflow: auto">
+                      <table>
+                        <tr>
+                          <th>variables</th>
+                          <th>output</th>
+                        </tr>
+                        <tr>
+                          <td>{}</td>
+                          <td>{}</td>
+                        </tr>
+                      </table>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>TOTAL: 4</td>
+      <td>SUCCESS: 4</td>
+      <td>FAILED: 0</td>
+      <td>ERROR: 0</td>
+      <td>SKIPPED: 0</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <th colspan="2">Name</th>
+      <th>Response Time</th>
+      <th>Detail</th>
+    </tr>
+
+    
+    
+    <tr id="record_1_1">
+      <th class="success" style="width:5em;">success</td>
+      <td colspan="2">install</td>
+      <td style="text-align:center;width:6em;">109.2 ms</td>
+      <td class="detail">
+
+        <a class="button" href="#popup_log_1_1">log</a>
+        <div id="popup_log_1_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_1">&times;</a>
+
+            <div class="content">
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          http://api.chumanapp.com/secure/?a=install&m=Api&c=App
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>body</th>
+                      <td>
+                        
+                          device_type=0&marketing_channel=chuman&language=zh-hans&device_brand=HUAWEI&device_token=860077037003271&device_model=HUAWEI+RIO-AL00
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>start_timestamp</th>
+                      <td>
+                        
+                          1539505894.3315718
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          POST
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>mauthorization</strong>: 0b379ed3f4f361a68859dece9ee632fe::6WptCbP8y+dvT1p+VDKcPc9jipY=
+                          </div>
+                          
+                          <div>
+                            <strong>versioncode</strong>: android_4.6.8
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Length</strong>: 133
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>user-agent</strong>: okhttp/3.10.0
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>content-type</strong>: application/x-www-form-urlencoded
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>data</th>
+                      <td>
+                        
+                          {'device_type': '0', 'marketing_channel': 'chuman', 'language': 'zh-hans', 'device_brand': 'HUAWEI', 'device_token': '860077037003271', 'device_model': 'HUAWEI RIO-AL00'}
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>params</th>
+                      <td>
+                        
+                          {'a': 'install', 'm': 'Api', 'c': 'App'}
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            http://api.chumanapp.com/secure/?a=install&m=Api&c=App
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Date</strong>: Sun, 14 Oct 2018 08:31:37 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>X-Powered-By</strong>: PHP/5.5.9-1ubuntu4.25
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Encoding</strong>: gzip
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: application/json; charset=utf-8
+                            </div>
+                            
+                            <div>
+                              <strong>Transfer-Encoding</strong>: chunked
+                            </div>
+                            
+                            <div>
+                              <strong>Vary</strong>: Accept-Encoding
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                        
+                      
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                        
+                      
+                      <tr>
+                        <th>content</th>
+                        <td>
+                          
+                            
+                              <pre>{&#34;status&#34;:&#34;ok&#34;,&#34;message&#34;:{&#34;key&#34;:&#34;&#34;,&#34;message&#34;:&#34;\u64cd\u4f5c\u6210\u529f&#34;},&#34;data&#34;:{&#34;install_token&#34;:&#34;5f0419b79f4fd4fe041772f658cc7c7b&#34;,&#34;user_id&#34;:3}}</pre>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Validators:</h3>
+              <div style="overflow: auto">
+                  <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>eq</td>
+                      <td>200</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        headers.Content-Type
+                      </td>
+                      <td>eq</td>
+                      <td>application/json; charset=utf-8</td>
+                      <td>application/json; charset=utf-8</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.status
+                      </td>
+                      <td>eq</td>
+                      <td>ok</td>
+                      <td>ok</td>
+                    </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>145</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>109.2</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>109.926</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        
+
+      </td>
+    </tr>
+  
+    
+    <tr id="record_1_2">
+      <th class="success" style="width:5em;">success</td>
+      <td colspan="2">login</td>
+      <td style="text-align:center;width:6em;">119.2 ms</td>
+      <td class="detail">
+
+        <a class="button" href="#popup_log_1_2">log</a>
+        <div id="popup_log_1_2" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_2">&times;</a>
+
+            <div class="content">
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          http://api.chumanapp.com/secure/?a=login&m=Api&c=User
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>body</th>
+                      <td>
+                        
+                          password=123456&user=188
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>start_timestamp</th>
+                      <td>
+                        
+                          1539505894.471972
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          POST
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>mauthorization</strong>: 0b379ed3f4f361a68859dece9ee632fe:5f0419b79f4fd4fe041772f658cc7c7b:S0IA3rXGLGBbUWJ/kpX1WWhhC+E=
+                          </div>
+                          
+                          <div>
+                            <strong>versioncode</strong>: android_4.6.8
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Length</strong>: 24
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>user-agent</strong>: okhttp/3.10.0
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>content-type</strong>: application/x-www-form-urlencoded
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>data</th>
+                      <td>
+                        
+                          {'password': '123456', 'user': '188'}
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>params</th>
+                      <td>
+                        
+                          {'a': 'login', 'm': 'Api', 'c': 'User'}
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            http://api.chumanapp.com/secure/?a=login&m=Api&c=User
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Date</strong>: Sun, 14 Oct 2018 08:31:37 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>X-Powered-By</strong>: PHP/5.5.9-1ubuntu4.24
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Encoding</strong>: gzip
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: application/json; charset=utf-8
+                            </div>
+                            
+                            <div>
+                              <strong>Transfer-Encoding</strong>: chunked
+                            </div>
+                            
+                            <div>
+                              <strong>Vary</strong>: Accept-Encoding
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                        
+                      
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                        
+                      
+                      <tr>
+                        <th>content</th>
+                        <td>
+                          
+                            
+                              <pre>{&#34;status&#34;:&#34;ok&#34;,&#34;message&#34;:{&#34;key&#34;:&#34;&#34;,&#34;message&#34;:&#34;\u64cd\u4f5c\u6210\u529f&#34;},&#34;data&#34;:{&#34;user_is_ban&#34;:0,&#34;is_appealed&#34;:0,&#34;install_token&#34;:&#34;5f0419b79f4fd4fe041772f658cc7c7b&#34;,&#34;profile&#34;:{&#34;user_id&#34;:&#34;32048333&#34;,&#34;device&#34;:&#34;android&#34;,&#34;avatar&#34;:&#34;app\/users\/avatars\/user_avatar_32048333_6a65d5f5b0334c0bb5207f2153b5c804.jpg&#34;,&#34;username&#34;:&#34;&#34;,&#34;nickname&#34;:&#34;\u54c7\u54c7188&#34;,&#34;sex&#34;:&#34;1&#34;,&#34;location&#34;:&#34;&#34;,&#34;email&#34;:&#34;&#34;,&#34;mobile&#34;:&#34;188&#34;,&#34;coins&#34;:&#34;3578&#34;,&#34;comment_notify&#34;:&#34;1&#34;,&#34;notify_sound_enabled&#34;:&#34;1&#34;,&#34;allow_favorite&#34;:&#34;1&#34;,&#34;notify_sound&#34;:&#34;&#34;,&#34;sfx&#34;:&#34;1&#34;,&#34;vibration&#34;:&#34;1&#34;,&#34;hide_all_comics&#34;:&#34;0&#34;,&#34;rated&#34;:&#34;0&#34;,&#34;level&#34;:&#34;1&#34;,&#34;country&#34;:&#34;&#34;,&#34;intro&#34;:&#34;33\u53e4\u602a\u602a\u53e4\u53e4\u602a\u602a\u53e4\u53e4\u602a\u602a\u53e4\u53e4\u602a\u602a&#34;,&#34;experience&#34;:&#34;0&#34;,&#34;gems&#34;:&#34;182&#34;,&#34;gold_gems&#34;:&#34;0&#34;,&#34;language&#34;:&#34;zh-hans&#34;,&#34;mobile_verified&#34;:&#34;0&#34;,&#34;email_verified&#34;:&#34;0&#34;,&#34;created&#34;:&#34;2018-07-10 17:38:12&#34;,&#34;gold_num&#34;:&#34;0&#34;,&#34;silver_num&#34;:&#34;0&#34;,&#34;copper_num&#34;:&#34;0&#34;,&#34;featured_num&#34;:&#34;0&#34;,&#34;background_img&#34;:&#34;&#34;,&#34;age&#34;:5,&#34;group_count&#34;:4,&#34;mycomic_count&#34;:22,&#34;comic_count&#34;:16,&#34;favorite_count&#34;:0,&#34;follows_count&#34;:8,&#34;fans_count&#34;:10,&#34;lty_free_time&#34;:1,&#34;lty_pay_time&#34;:2,&#34;lty_nxt_coin&#34;:10,&#34;lty_tips&#34;:&#34;\u4eca\u5929\u8fd8\u6ca1\u6709\u7ffb\u724c\u54e6&#34;,&#34;level_name&#34;:&#34;\u521d\u89e6&#34;,&#34;user_level&#34;:&#34;1&#34;,&#34;max_level&#34;:16,&#34;cur_exp&#34;:&#34;0&#34;,&#34;max_exp&#34;:10,&#34;wear_p_id&#34;:&#34;0&#34;,&#34;wear_p_url&#34;:&#34;&#34;,&#34;user_property&#34;:[{&#34;p_id&#34;:1,&#34;p_name&#34;:&#34;\u5b85&#34;,&#34;max_score&#34;:10,&#34;p_score&#34;:0},{&#34;p_id&#34;:2,&#34;p_name&#34;:&#34;\u8150&#34;,&#34;max_score&#34;:10,&#34;p_score&#34;:0},{&#34;p_id&#34;:3,&#34;p_name&#34;:&#34;\u840c&#34;,&#34;max_score&#34;:10,&#34;p_score&#34;:0},{&#34;p_id&#34;:4,&#34;p_name&#34;:&#34;\u71c3&#34;,&#34;max_score&#34;:10,&#34;p_score&#34;:0},{&#34;p_id&#34;:5,&#34;p_name&#34;:&#34;\u5145&#34;,&#34;max_score&#34;:10,&#34;p_score&#34;:0},{&#34;p_id&#34;:6,&#34;p_name&#34;:&#34;\u50b2&#34;,&#34;max_score&#34;:10,&#34;p_score&#34;:0}],&#34;sys_tags&#34;:[],&#34;user_tags&#34;:[&#34;&#34;],&#34;birthday&#34;:&#34;2013-01-23&#34;,&#34;blood_type&#34;:&#34;&#34;,&#34;is_expert&#34;:1,&#34;is_editor&#34;:1,&#34;editor_time&#34;:&#34;2018-08-23&#34;,&#34;is_vip&#34;:1,&#34;userLevel&#34;:{&#34;total_level&#34;:17,&#34;phase&#34;:2}},&#34;accounts&#34;:[]}}</pre>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Validators:</h3>
+              <div style="overflow: auto">
+                  <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>eq</td>
+                      <td>200</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        headers.Content-Type
+                      </td>
+                      <td>eq</td>
+                      <td>application/json; charset=utf-8</td>
+                      <td>application/json; charset=utf-8</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.status
+                      </td>
+                      <td>eq</td>
+                      <td>ok</td>
+                      <td>ok</td>
+                    </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>1813</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>119.2</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>124.066</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        
+
+      </td>
+    </tr>
+  
+    
+    <tr id="record_1_3">
+      <th class="success" style="width:5em;">success</td>
+      <td colspan="2">get_subscribed_channel_list</td>
+      <td style="text-align:center;width:6em;">356.4 ms</td>
+      <td class="detail">
+
+        <a class="button" href="#popup_log_1_3">log</a>
+        <div id="popup_log_1_3" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_3">&times;</a>
+
+            <div class="content">
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          http://api.chumanapp.com/secure/?m=Api&c=HomePage&a=get_home_content_list
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>body</th>
+                      <td>
+                        
+                          None
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>start_timestamp</th>
+                      <td>
+                        
+                          1539505894.606773
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          GET
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>mauthorization</strong>: 0b379ed3f4f361a68859dece9ee632fe:5f0419b79f4fd4fe041772f658cc7c7b:NtnRsgFVELNuJb8U6iCkibBddtE=
+                          </div>
+                          
+                          <div>
+                            <strong>versioncode</strong>: android_4.6.8
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>user-agent</strong>: okhttp/3.10.0
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>params</th>
+                      <td>
+                        
+                          {}
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            http://api.chumanapp.com/secure/?m=Api&c=HomePage&a=get_home_content_list
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Date</strong>: Sun, 14 Oct 2018 08:31:38 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>X-Powered-By</strong>: PHP/5.5.9-1ubuntu4.25
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Encoding</strong>: gzip
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: application/json; charset=utf-8
+                            </div>
+                            
+                            <div>
+                              <strong>Transfer-Encoding</strong>: chunked
+                            </div>
+                            
+                            <div>
+                              <strong>Vary</strong>: Accept-Encoding
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                        
+                      
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                        
+                      
+                      <tr>
+                        <th>content</th>
+                        <td>
+                          
+                            
+                              <pre>{&#34;status&#34;:&#34;ok&#34;,&#34;message&#34;:{&#34;key&#34;:&#34;&#34;,&#34;message&#34;:&#34;\u64cd\u4f5c\u6210\u529f&#34;},&#34;data&#34;:{&#34;content_new&#34;:20,&#34;show_more&#34;:0,&#34;list&#34;:[{&#34;target_id&#34;:&#34;57&#34;,&#34;target_url&#34;:&#34;&#34;,&#34;name&#34;:&#34;\u6f2b\u5f71\u8fde\u8f7d&#34;,&#34;title_image&#34;:&#34;&#34;,&#34;category&#34;:18,&#34;display&#34;:{&#34;border&#34;:1},&#34;update&#34;:{},&#34;content_list&#34;:[{&#34;obj_id&#34;:&#34;501377&#34;,&#34;obj_type&#34;:18,&#34;obj_name&#34;:&#34;\u51fa\u9053\uff0c\u62dc\u6258\u4e86\uff01&#34;,&#34;obj_img&#34;:&#34;chumanShop_news\/1539085528000904.jpg&#34;,&#34;obj_desc&#34;:&#34;\u300a\u51fa\u9053\uff0c\u62dc\u6258\u4e86\uff01\u300b\u662f\u89e6\u6f2b\u9996\u4e2a\u865a\u62df\u5076\u50cf\u4e92\u52a8\u6f2b\u5267\uff0c\u5145\u6ee1\u6d3b\u529b\u76847\u4f4d\u5076\u50cf\u7ec3\u4e60\u751f\uff0c\u52aa\u529b\u7684\u6325\u6d12\u7740\u6c57\u6c34\uff0c\u8fd9\u4e2a\u76db\u590f\uff0c\u4f60\u4f1apick\u8c01\uff1f&#34;,&#34;obj_tag&#34;:[&#34;\u604b\u7231&#34;,&#34;\u90fd\u5e02&#34;,&#34;\u6e38\u620f&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;30120842&#34;,&#34;owner_name&#34;:&#34;\u89e6\u6f2b\u51fa\u54c1&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_30120842_018209374a6340d8af8c65e1e6364db8.jpg&#34;}}]},{&#34;target_id&#34;:&#34;1&#34;,&#34;target_url&#34;:&#34;&#34;,&#34;name&#34;:&#34;\u89e6\u6f2b\u5b98\u65b9&#34;,&#34;title_image&#34;:&#34;app\/user\/channel\/1498901481000978.png&#34;,&#34;tag&#34;:1,&#34;category&#34;:13,&#34;display&#34;:{&#34;column&#34;:2,&#34;row&#34;:2,&#34;border&#34;:1},&#34;update&#34;:{&#34;content_num&#34;:&#34;8&#34;,&#34;recommend_new&#34;:0},&#34;content_list&#34;:[{&#34;obj_id&#34;:&#34;2919852&#34;,&#34;obj_type&#34;:6,&#34;obj_name&#34;:&#34;\u521d\u604b\u53cb\u60c5\u4ef7\uff08\u771f\u5b9e\u6545\u4e8b\uff09&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_4941892_bc27730694be4d8083ab505c37fb41ea.jpg&#34;,&#34;obj_desc&#34;:&#34;\u51a4\u5bb6\u5b9c\u89e3\u4e0d\u5b9c\u7ed3.&#34;,&#34;obj_tag&#34;:[&#34;\u604b\u7231&#34;,&#34;\u6821\u56ed&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;4941892&#34;,&#34;owner_name&#34;:&#34;\u51b7\u516e@\u5e95\u7ebf\u662d\u5b64&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_4941892_7161d60149c544f49c64f30e386c2a92.jpg&#34;}},{&#34;obj_id&#34;:&#34;515603&#34;,&#34;obj_type&#34;:6,&#34;obj_name&#34;:&#34;\u590f\u5f64\u5bb6\u7684\u5154\u5b50&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_894123_4c33d6c87dd44229a22e5ef2c9ac6f62.jpg&#34;,&#34;obj_desc&#34;:&#34;\u5c0f\u5154\u5b50\uff0c\u4e0d\u8981\u5fd8\u4e86\u6211\u54e6\uff01&#34;,&#34;obj_tag&#34;:[&#34;\u5947\u5e7b&#34;,&#34;\u6821\u56ed&#34;,&#34;\u604b\u7231&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;894123&#34;,&#34;owner_name&#34;:&#34;\u82e5\u7433\u0e05\u300e\u552f\u7231\u846c\u300f&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_894123_5ada2c0a6ba44e0a972ee4f5d76346d2.jpg&#34;}},{&#34;obj_id&#34;:&#34;1115742&#34;,&#34;obj_type&#34;:6,&#34;obj_name&#34;:&#34;\u4e11\u5973\u5927\u9006\u88ad&#34;,&#34;obj_img&#34;:&#34;app\/comics\/titles\/pic_3924553_555B0684-B55A-463E-BDA5-6FFB6F704D66.jpg&#34;,&#34;obj_desc&#34;:&#34;\u8c01\u8bf4\u4e11\u5973\u4e0d\u80fd\u9006\u88ad\uff1f\uff01\uff08\u6b63\u7bc7\u5927\u6982\u8981\u516d\u5341\u591a\u8bdd\u5b8c\u7ed3\uff09\u6b63\u7247\u5b8c\u7ed3\u540e\u4f1a\u6709\u756a\u5916\u800c\u4e14\u8fd8\u633a\u957f\uff08\u8fd8\u6709\u5c31\u662f\u5173\u4e8e\u82e5\u9690\u7684\u7b14\u540d\u95ee\u9898\uff0c\u4e4b\u524d\u5462\u82e5\u9690\u662f\u53eb\u7a7a\u7075\u7684\uff0c\u4f46\u90a3\u4e2a\u65f6\u5019\u4e0d\u77e5\u9053\u548c\u5927\u4f6c\u649e\u540d\u4e86\uff0c\u4f46\u662f\u540e\u6765\u4e3a\u4e86\u65b9\u4fbf\u5c31\u6539\u53eb\u7a7a\u7075\u82e5\u9690\u4e86\uff0c\u4f46\u5f88\u591a\u4eba\u6ca1\u6539\u8fc7\u6765\uff0c\u8fd8\u662f\u53eb\u6211\u7a7a\u7075\uff0c\u6211\u4e5f\u6ca1\u6709\u529e\u6cd5\uff0c\u4f60\u4eec\u5c3d\u91cf\u53eb\u6211\u82e5\u9690\u5427\u2026\u2026\uff09\u6700\u540e\u5462\uff0c\u90a3\u4e9b\u5bf9\u6211\u540d\u5b57\u6709\u5f02\u8bae\u7684\u4eba\uff0c\u6211\u4e5f\u61d2\u5f97\u548c\u4f60\u4eec\u89e3\u91ca\u4e86\uff0c\u51b7\u5632\u70ed\u8bbd\u4e5f\u597d\uff0c\u6ca1\u6709\u6076\u610f\u4e5f\u597d\uff0c\u8bf7\u5728\u770b\u6f2b\u753b\u4e4b\u524d\u628a\u7b80\u4ecb\u770b\u4e86\uff0c\u8c22\u8c22\uff0c\u8981\u662f\u89c9\u5f97\u5b57\u591a\u4e0d\u60f3\u770b\u90a3\u5c31\u522b\u770b&#34;,&#34;obj_tag&#34;:[&#34;\u6821\u56ed&#34;,&#34;\u604b\u7231&#34;,&#34;\u90fd\u5e02&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;3924553&#34;,&#34;owner_name&#34;:&#34;\u7a7a\u7075\u82e5\u9690\/\u554a\u554a\u554a\uff01&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/avatar_3924553_20181004174906.jpg&#34;}},{&#34;obj_id&#34;:&#34;5778418&#34;,&#34;obj_type&#34;:6,&#34;obj_name&#34;:&#34;\u7af9\u9a6c\u7537\u795e\u5ba0\u7ffb\u5929&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_6363370_7ac85009f09b4521a58a180bf2c3dea8.jpg&#34;,&#34;obj_desc&#34;:&#34;\u90a3\u5e74\u590f\u5929\uff0c\u8749\u9e23\u6084\u7136\u800c\u81f3\uff0c\u6811\u836b\u7684\u53f6\u5b50\u906e\u4f4f\u4e86\u9633\u5149\uff0c\u6bdb\u6bdb\u866b\u53d8\u6210\u4e86\u8774\u8776\uff0c\u6211\u4eec\u5374\u76f8\u9047\u4e86\u3002\u6211\u4eec\u4ece\u76f8\u9047\u5230\u76f8\u8bc6\uff0c\u4ece\u76f8\u8bc6\u5230\u76f8\u77e5\uff0c\u4ece\u76f8\u77e5\u5230\u76f8\u7231\u3002\u6211\u4eec\u966a\u4f34\u5bf9\u65b9\u8d70\u8fc7\u4e86\u4e00\u4e2a\u53c8\u4e00\u4e2a\u7684\u590f\u5929\u3002\u3010\u4eca\u5e74\u590f\u5929\uff0c\u6211\u4eec\u6765\u966a\u4f34\u4f60\uff01\u8d70\u8fdb\u9752\u6885\u7af9\u9a6c\u7684\u6545\u4e8b\uff01\u3011\u30102018\u7684\u590f\u5929\uff0c\u611f\u8c22\u6709\u4f60\u4eec\u7684\u966a\u4f34\uff01\u3011&#34;,&#34;obj_tag&#34;:[&#34;\u604b\u7231&#34;,&#34;\u6821\u56ed&#34;,&#34;\u90fd\u5e02&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;6363370&#34;,&#34;owner_name&#34;:&#34;\u8336\u60dc&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_6363370_f3a910bac13846a8ba2eb076be96a688.jpg&#34;}}]},{&#34;target_id&#34;:&#34;56&#34;,&#34;target_url&#34;:&#34;&#34;,&#34;name&#34;:&#34;\u70ed\u63a8\u65b0\u6f2b\u5267&#34;,&#34;title_image&#34;:&#34;&#34;,&#34;category&#34;:17,&#34;display&#34;:{&#34;column&#34;:3,&#34;row&#34;:2,&#34;border&#34;:1},&#34;update&#34;:{},&#34;content_list&#34;:[{&#34;obj_id&#34;:&#34;1866691&#34;,&#34;obj_type&#34;:17,&#34;obj_name&#34;:&#34;\u543e\u4e43\u4f5b\u9640&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_447578_726c1e7e086a48529afe22ea021b25e5.jpg&#34;,&#34;obj_desc&#34;:&#34;\u4f5b\u9640\u9a7e\u5230\uff0c\u5996\u9b54\u9b3c\u602a\u901f\u901f\u8ba9\u884c\uff01\n\u5df2\u6388\u6743\u7ed9\u590f\u59d0\u59d0&#34;,&#34;obj_tag&#34;:[&#34;\u4ed9\u4fa0&#34;,&#34;\u53e4\u98ce&#34;,&#34;\u7206\u7b11&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;447578&#34;,&#34;owner_name&#34;:&#34;GZ\u65e0\u6240\u8c13&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_447578_edee35efd9b740baa005bb229eea9adc.jpg&#34;}},{&#34;obj_id&#34;:&#34;79&#34;,&#34;obj_type&#34;:17,&#34;obj_name&#34;:&#34;\u4e0e\u541b\u540c\u5ba4@\u8d85\u751c\u5fc3\u8df3&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_2372662_6f2ae221f5344838839f284c748485da.jpg&#34;,&#34;obj_desc&#34;:&#34;\u60f3\u8c61\u8fc7\u548c\u56db\u4e2a\u7537\u751f\u540c\u5c45\u5417\uff1f\u3010\u5408\u4f5c\u79bb\u9152\u5996\u3011\n\u6e29\u67d4\u62c2\u4eba\uff0c\u9b45\u529b\u64a9\u4eba\uff0c\u51b0\u51b7\u52a8\u4eba\uff0c\u53ef\u7231\u840c\u4eba\uff0c\u54ea\u4e00\u4e2a\u662f\u4f60\u7684\u83dc\uff1f&#34;,&#34;obj_tag&#34;:[&#34;\u604b\u7231&#34;,&#34;\u7206\u7b11&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;2372662&#34;,&#34;owner_name&#34;:&#34;\u6674\u5929\u2606\u66ae\u96ea@\u9ad8\u4e09\u9000\uff0b\u5076\u5c14\u8bc8\u5c38&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_2372662_c7a3fb985f8b426bbc48bb0e009309b9.jpg&#34;}},{&#34;obj_id&#34;:&#34;503433&#34;,&#34;obj_type&#34;:17,&#34;obj_name&#34;:&#34;\u4f59\u6e05\u6b22&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_4266497_1b4d7631c8434b2eb4431d39f2a2faf2.jpg&#34;,&#34;obj_desc&#34;:&#34;\u4e3a\u4f60\u5c60\u622e\u5929\u4e0b\uff0c\u8d1f\u5c3d\u82cd\u751f\uff01\n\u53e4\u98ce\u7384\u5e7b\u3002&#34;,&#34;obj_tag&#34;:[&#34;\u604b\u7231&#34;,&#34;\u4ed9\u4fa0&#34;,&#34;\u53e4\u98ce&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;4266497&#34;,&#34;owner_name&#34;:&#34;\u4e8c\u5341\u56db\u5b85\u6c14&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_4266497_25decdc243c54dc8aee044d643be2cf4.jpg&#34;}},{&#34;obj_id&#34;:&#34;1744730&#34;,&#34;obj_type&#34;:17,&#34;obj_name&#34;:&#34;\u68a6\u6e38\u5c11\u5973\u4e0e\u865a\u62df\u4eba\u7269&#34;,&#34;obj_img&#34;:&#34;app\/cover\/template\/images\/cover_template_4470372_7782436f704b444bab1887693b19ffdf.jpg&#34;,&#34;obj_desc&#34;:&#34;\u865a\u62df\u4eba\u7269\u6210\u7cbe\u4e86\uff1f\uff1f\uff01&#34;,&#34;obj_tag&#34;:[&#34;\u604b\u7231&#34;,&#34;\u5947\u5e7b&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;4470372&#34;,&#34;owner_name&#34;:&#34;\u5f25\u82fc.\/\u559cBM.\/\u5b50\u5948\u6211\u7684&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_4470372_3cd28643629b4f0a93c67c71c61bdb46.jpg&#34;}},{&#34;obj_id&#34;:&#34;170824&#34;,&#34;obj_type&#34;:17,&#34;obj_name&#34;:&#34;\u6cea\u82b1\u763e&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_22940305_2b9f16fe4989496e976c925eac6577cf.jpg&#34;,&#34;obj_desc&#34;:&#34;\u547d\u76f8\u514b\uff0c\u83ab\u76f8\u89c1\u3002\n\u5fc3\u76f8\u5370\uff0c\u83ab\u76f8\u604b\u3002\n\u7ec8\u4e0d\u6094\uff0c\u60c5\u96be\u65ad\uff0c\u6cea\u6210\u763e\u3002\uff08\u975e\u5144\u59b9\u604b\u7684\u8650\u604b\u60c5\u4ec7\uff09\n\u3010\u5df2\u4e0e\u6709\u5355\u5927\u4f6c\u5408\u4f5c\u6f2b\u753b\u7248\u3011&#34;,&#34;obj_tag&#34;:[&#34;\u604b\u7231&#34;,&#34;\u5947\u5e7b&#34;,&#34;\u53e4\u98ce&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;22940305&#34;,&#34;owner_name&#34;:&#34;\u5361\u5361\u679c&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/tem_1521603122064.jpg&#34;}},{&#34;obj_id&#34;:&#34;1951657&#34;,&#34;obj_type&#34;:17,&#34;obj_name&#34;:&#34;\u67b7\u95012:\u8ff7\u9014\u3010\u7b2c\u4e94\u4eba\u683c\u3011&#34;,&#34;obj_img&#34;:&#34;app\/comics\/titles\/pic_27687384_E5BFCD5C-0FD7-4444-B162-AEB7B07EE764.jpg&#34;,&#34;obj_desc&#34;:&#34;\u8ff7\u4e8e\u540c\u5fc3\uff0c\u5f52\u4e8e\u6b8a\u9014\u3002\n\uff08\u5267\u60c5\u627f\u63a5\u300a\u67b7\u9501\u3010\u7b2c\u4e94\u4eba\u683c\u540c\u4eba\u3011\u300b\uff0c\u65b0\u6765\u7684\u7b52\u5b50\u5efa\u8bae\u5148\u53bb\u56de\u987e\u4e0b\u7b2c\u4e00\u90e8\u8865\u5145\u80cc\u666f\u77e5\u8bc6\uff09\n\u3010\u591acp\uff1a\u6770\u4f63\u3001\u9057\u7167\u3001\u51b2\u649e\u3001\u6b3a\u8bc8\u7b49\uff0c\u4e3b\u5267\u60c5\u7ebf\u8f85\u611f\u60c5\u7ebf\u3002\u3011&#34;,&#34;obj_tag&#34;:[&#34;\u60ac\u7591&#34;,&#34;\u540c\u4eba&#34;,&#34;\u6e38\u620f&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;27687384&#34;,&#34;owner_name&#34;:&#34;\u54b8\u9c7c\u7ca5\u7ca5&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/avatar_27687384_20181002151239.jpg&#34;}}]},{&#34;target_id&#34;:&#34;25&#34;,&#34;target_url&#34;:&#34;&#34;,&#34;name&#34;:&#34;\u6f2b\u5267\u540c\u4eba&#34;,&#34;title_image&#34;:&#34;app\/user\/channel\/1499333892000799.jpg&#34;,&#34;tag&#34;:2,&#34;category&#34;:13,&#34;display&#34;:{&#34;column&#34;:1,&#34;row&#34;:4,&#34;border&#34;:1},&#34;update&#34;:{&#34;content_num&#34;:&#34;&#34;,&#34;recommend_new&#34;:0},&#34;content_list&#34;:[{&#34;obj_id&#34;:&#34;1868736&#34;,&#34;obj_type&#34;:17,&#34;obj_name&#34;:&#34;\u65e0\u9650\u4e16\u754c&#34;,&#34;obj_img&#34;:&#34;app\/comics\/titles\/pic_9388083_336F35AF-67AD-4947-BCE1-3DE1DEEB1956.jpg&#34;,&#34;obj_desc&#34;:&#34;\u6211\u53ea\u662f\u4e00\u4e2a\u5e73\u5e38\u4eba\uff0c\u4f46\u603b\u6709\u4e00\u5929\u6211\u80fd\u8d85\u8d8a\u5e73\u5e38\u7684\u81ea\u5df1\u6765\u53d6\u5f97\u8363\u8000\u3002\u2014\u2014\u53f6\u5341&#34;,&#34;obj_tag&#34;:[&#34;\u5c11\u5e74&#34;,&#34;\u90fd\u5e02&#34;,&#34;\u6e38\u620f&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;9388083&#34;,&#34;owner_name&#34;:&#34;\u3010\u6295\u7a3f\u54a8\u8be2\u3011\u53f6\u4e00&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/avatar_9388083_20180712001011.jpg&#34;}},{&#34;obj_id&#34;:&#34;836966&#34;,&#34;obj_type&#34;:17,&#34;obj_name&#34;:&#34;\u5feb\u7a7f\u4e4b\u5d29\u574f\u7684NPC&#34;,&#34;obj_img&#34;:&#34;app\/avg\/cover\/titles\/title_avg_cover_8632718_56abff9df5574550b20e7d4dfa882822.jpg&#34;,&#34;obj_desc&#34;:&#34;\u3010\u7b2c\u4e00\u4e2a\u6e38\u620f\u4e16\u754c\u2014\u2014\u738b\u8005\u8363\u8000\u3011\u8eab\u4e3a21\u4e16\u7eaa\u7684\u65b0\u65b0\u5b85\u5973\uff0c\u6211\u514b\u5df1\u5949\u516c\uff0c\u52e4\u4fed\u8282\u7ea6\uff0c\u70ed\u7231\u7956\u56fd\u2026\u2026\u6240\u4ee5\uff0c\u4e3a\u4ec0\u4e48\u6211\u4f1a\u7a7f\u8d8a\u5230\u6e38\u620f\u91cc\uff1f\n\u7a7f\u5230\u6e38\u620f\u91cc\u4e5f\u5c31\u7b97\u4e86\uff0c\u4e3a\u4ec0\u4e48\u6211\u4f1a\u662fNPC\uff1f\uff01\n\u597d\u5427\uff0cNPC\u4e5f\u5c31\u7b97\u4e86\uff0c\u4f60\u7684\u8fd9\u4e9b\u4efb\u52a1\u53c8\u662f\u4ec0\u4e48\u9b3c\uff1f\uff01&#34;,&#34;obj_tag&#34;:[&#34;\u7206\u7b11&#34;,&#34;\u540c\u4eba&#34;,&#34;\u6e38\u620f&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;8632718&#34;,&#34;owner_name&#34;:&#34;\u5979\u4e0e\u6708\u5149\u4e3a\u90bb&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/tem_1509180092202.jpg&#34;}},{&#34;obj_id&#34;:&#34;1951657&#34;,&#34;obj_type&#34;:17,&#34;obj_name&#34;:&#34;\u67b7\u95012:\u8ff7\u9014\u3010\u7b2c\u4e94\u4eba\u683c\u3011&#34;,&#34;obj_img&#34;:&#34;app\/comics\/titles\/pic_27687384_E5BFCD5C-0FD7-4444-B162-AEB7B07EE764.jpg&#34;,&#34;obj_desc&#34;:&#34;\u8ff7\u4e8e\u540c\u5fc3\uff0c\u5f52\u4e8e\u6b8a\u9014\u3002\n\uff08\u5267\u60c5\u627f\u63a5\u300a\u67b7\u9501\u3010\u7b2c\u4e94\u4eba\u683c\u540c\u4eba\u3011\u300b\uff0c\u65b0\u6765\u7684\u7b52\u5b50\u5efa\u8bae\u5148\u53bb\u56de\u987e\u4e0b\u7b2c\u4e00\u90e8\u8865\u5145\u80cc\u666f\u77e5\u8bc6\uff09\n\u3010\u591acp\uff1a\u6770\u4f63\u3001\u9057\u7167\u3001\u51b2\u649e\u3001\u6b3a\u8bc8\u7b49\uff0c\u4e3b\u5267\u60c5\u7ebf\u8f85\u611f\u60c5\u7ebf\u3002\u3011&#34;,&#34;obj_tag&#34;:[&#34;\u60ac\u7591&#34;,&#34;\u540c\u4eba&#34;,&#34;\u6e38\u620f&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;27687384&#34;,&#34;owner_name&#34;:&#34;\u54b8\u9c7c\u7ca5\u7ca5&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/avatar_27687384_20181002151239.jpg&#34;}},{&#34;obj_id&#34;:&#34;580525&#34;,&#34;obj_type&#34;:17,&#34;obj_name&#34;:&#34;\u72fc\u624d\u5973\u5e3d\u3010\u77ed\u7bc7\u3011&#34;,&#34;obj_img&#34;:&#34;app\/cover\/template\/images\/cover_template_1126027_630aeaec4f9245aebc5758fd1803abb0.jpg&#34;,&#34;obj_desc&#34;:&#34;\u53f7\u5916\u53f7\u5916\uff01\u5927\u7070\u72fc\u559c\u6b22\u7684\u4eba\u662f\u5c0f\u7ea2\u5e3d\uff01&#34;,&#34;obj_tag&#34;:[&#34;\u604b\u7231&#34;,&#34;\u540c\u4eba&#34;,&#34;\u6cbb\u6108&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;1126027&#34;,&#34;owner_name&#34;:&#34;\u8424\u843d \u3010\u5f00\u5b66\u6de1\u3011&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_1126027_39ac835158f34718a7cce41054740189.jpg&#34;}}]},{&#34;target_id&#34;:&#34;17350&#34;,&#34;target_url&#34;:&#34;&#34;,&#34;name&#34;:&#34;\u4e07\u5996\u5be8\u3010ABC\u8054\u76df\u3011&#34;,&#34;title_image&#34;:&#34;app\/users\/channel_cover\/channel_cover_user_id_6992333_1e9ab0e904de81008ac008ee26d29514.jpg&#34;,&#34;tag&#34;:2,&#34;category&#34;:13,&#34;display&#34;:{&#34;column&#34;:2,&#34;row&#34;:2,&#34;border&#34;:1},&#34;update&#34;:{&#34;content_num&#34;:&#34;&#34;,&#34;recommend_new&#34;:0},&#34;content_list&#34;:[{&#34;obj_id&#34;:&#34;54324&#34;,&#34;obj_type&#34;:14,&#34;obj_name&#34;:&#34;\u6211\u7684\u5973\u53cb\u662f\u53ea\u72fc\u3010\u5468\u66f4\u3011&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_1162423_b6c07229827f4fd1af90957135673d01.jpg&#34;,&#34;obj_desc&#34;:&#34;\u5f53\u4f60\u631a\u7231\u7684\u4eba\u53d8\u6210\u4e86\u4e00\u53ea\u72fc\uff0c\u4f60\u4f1a\u600e\u4e48\u529e\uff1f&#34;,&#34;obj_tag&#34;:[&#34;\u604b\u7231&#34;,&#34;\u90fd\u5e02&#34;,&#34;\u79d1\u5e7b&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;1162423&#34;,&#34;owner_name&#34;:&#34;\u98ce\u51cc.&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_1162423_eaae168f642d4692afeb8a59d78c927c.jpg&#34;}},{&#34;obj_id&#34;:&#34;353214&#34;,&#34;obj_type&#34;:17,&#34;obj_name&#34;:&#34;\u4fee\u5973&#34;,&#34;obj_img&#34;:&#34;app\/cover\/template\/images\/cover_template_7419074_b97600cbbf7b44deb707e5de9eef662b.jpg&#34;,&#34;obj_desc&#34;:&#34;\u5728\u65e0\u9650\u8c1c\u56e2\u4e2d\u9690\u85cf\u7684\u771f\u76f8\uff0c\u7ec8\u7a76\u662f\u6b8b\u9177\u7684\u2026\u2026\n\u3010\u6ce8:\u56e0\u4e3a\u67d0\u4e9b\u539f\u56e0\uff0c\u540e\u9762\u7684\u5185\u5bb9\u4f1a\u8ddf\u7b2c\u4e00\u7ae0\u4ecb\u7ecd\u7684\u6709\u4e9b\u5bf9\u4e0d\u4e0a\u79f0\uff0c\u8fd8\u671b\u89c1\u8c05\u3002\u3011&#34;,&#34;obj_tag&#34;:[&#34;\u90fd\u5e02&#34;,&#34;\u60ac\u7591&#34;,&#34;\u6cbb\u6108&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;7419074&#34;,&#34;owner_name&#34;:&#34;\u4e5d\u5b50\u5a18.&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_7419074_b60952c0a61d41e194b56c3df549126d.jpg&#34;}},{&#34;obj_id&#34;:&#34;1464870&#34;,&#34;obj_type&#34;:17,&#34;obj_name&#34;:&#34;\u72f1\u7f6a&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_2779036_b3bd616520284f9badadf8373da6ef0e.jpg&#34;,&#34;obj_desc&#34;:&#34;\u8ba9\u6211\u626e\u6f14\u6240\u6709\u7684\u4e11\u6076\uff0c\u8d4e\u56de\u4f60\u6240\u6709\u7684\u7f6a\u884c\u3002\n\u6b22\u8fce\u6765\u5230\u5341\u516b\u5c42\u5730\u72f1\u2026\u2026\n\u3010\u803d\u7f8e\u3011\u3010\u4e3b\u66f4\u3011\u3010\u5468\u66f4\u3011&#34;,&#34;obj_tag&#34;:[&#34;\u604b\u7231&#34;,&#34;\u60ac\u7591&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;2779036&#34;,&#34;owner_name&#34;:&#34;\u8086 \u7b11&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_2779036_3de3294dc56b4fc199b7c6e9b4e9d46b.jpg&#34;}},{&#34;obj_id&#34;:&#34;6344396&#34;,&#34;obj_type&#34;:6,&#34;obj_name&#34;:&#34;\u4e0d\u5fd8\u521d\u5fc3&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_24819048_fd7f89457bf54a9ab7b9513127523ac4.jpg&#34;,&#34;obj_desc&#34;:&#34;\u5728\u4e00\u4e2a\u591c\u665a\uff0c\u6211\u9047\u89c1\u4e86\u4ed6\u2026\u2026\u542c\u8bf4\u4eba\u7684\u559c\u6b22\u4e00\u822c\u53d1\u751f\u5728\u770b\u89c1\u5f02\u6027\u7684\u7b2c\u4e03\u79d2\u949f\uff0c\u4ece\u6765\u6ca1\u559c\u6b22\u8fc7\u4efb\u4f55\u5f02\u6027\u7684\u8303\u5a49\u6ee2\uff0c\u5979\u7684\u521d\u604b\u5c31\u662f\u8fd9\u4e2a\u7537\u751f\u5417\u2026\u2026&#34;,&#34;obj_tag&#34;:[&#34;\u604b\u7231&#34;,&#34;\u90fd\u5e02&#34;,&#34;\u6e38\u620f&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;24819048&#34;,&#34;owner_name&#34;:&#34;\u6c81\u767d\u4e00\u590f.\u62d6\u66f4\u053e \u032e \u053e&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_24819048_1e5a8365da23452ab5a490c169dcd9e1.jpg&#34;}}]},{&#34;target_id&#34;:&#34;55&#34;,&#34;target_url&#34;:&#34;&#34;,&#34;name&#34;:&#34;\u68a6\u60f3\u4e4b\u8def&#34;,&#34;title_image&#34;:&#34;&#34;,&#34;category&#34;:15,&#34;display&#34;:{&#34;border&#34;:0},&#34;update&#34;:{},&#34;content_list&#34;:[{&#34;obj_id&#34;:&#34;55&#34;,&#34;obj_type&#34;:15,&#34;obj_name&#34;:&#34;\u68a6\u60f3\u4e4b\u8def&#34;,&#34;obj_img&#34;:&#34;chumanShop_news\/1499425326000450.jpg&#34;,&#34;obj_url&#34;:&#34;http:\/\/qnp.chumanapp.com\/MXZLu\/index.html?version=1.1&#34;,&#34;obj_tag&#34;:[],&#34;obj_desc&#34;:&#34;&#34;,&#34;obj_owner&#34;:{}}]},{&#34;target_id&#34;:&#34;6&#34;,&#34;target_url&#34;:&#34;&#34;,&#34;name&#34;:&#34;\u7075\u5f02\u60ac\u7591&#34;,&#34;title_image&#34;:&#34;app\/user\/channel\/1499049154000850.jpg&#34;,&#34;tag&#34;:2,&#34;category&#34;:13,&#34;display&#34;:{&#34;column&#34;:1,&#34;row&#34;:4,&#34;border&#34;:1},&#34;update&#34;:{&#34;content_num&#34;:&#34;&#34;,&#34;recommend_new&#34;:0},&#34;content_list&#34;:[{&#34;obj_id&#34;:&#34;1952364&#34;,&#34;obj_type&#34;:17,&#34;obj_name&#34;:&#34;\u65f6\u5149\u7684\u79bb\u6b4c\u3010\u4e3b\u66f4\u3011&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_14333937_de9da11e6f6f49b28f7a067d7f528912.jpg&#34;,&#34;obj_desc&#34;:&#34;\u5373\u5c06\u5206\u522b\uff0c\u518d\u89c1\u65f6\u662f\u654c?\u8fd8\u662f\u53cb\u5462?\n\u80cc\u5730\u91cc\u53c8\u6709\u591a\u5c11\u8270\u82e6\u4e0e\u78e8\u96be\u5462\uff1f\u4e00\u6b21\u53c8\u4e00\u6b21\u7684\u9634\u8c0b\u53c8\u4f1a\u4f7f\u591a\u5c11\u4eba\u6539\u53d8?\u3010\u5408\u4f5c:\u9634\u7279\u4e43\u3011&#34;,&#34;obj_tag&#34;:[&#34;\u604b\u7231&#34;,&#34;\u90fd\u5e02&#34;,&#34;\u60ac\u7591&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;14333937&#34;,&#34;owner_name&#34;:&#34;\u6696\u516e\u2661\u3010cp:\u81ea\u7531\u7fbd\u7ffc\u3011&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_14333937_fc0a893cf9b946fd88ff3ba0b4b76808.jpg&#34;}},{&#34;obj_id&#34;:&#34;1773411&#34;,&#34;obj_type&#34;:17,&#34;obj_name&#34;:&#34;\u57ce\u5e02\u6b32\u671b\u4e4b\u5149&#34;,&#34;obj_img&#34;:&#34;app\/cover\/template\/images\/cover_template_5631401_c08b90d010d84f6aa7f8d8b1a0e89753.jpg&#34;,&#34;obj_desc&#34;:&#34;\u5728\u4e00\u5ea7\u5de8\u5927\u7684\u57ce\u5e02\u6f29\u6da1\u4e2d\uff0c\u8c01\u624d\u662f\u771f\u6b63\u7684\u5e55\u540e\u4e3b\u4f7f\uff1f\u4e00\u4ef6\u4ef6\u6251\u6714\u8ff7\u79bb\u7684\u6848\u4ef6\u5c06\u5e26\u9886\u4eba\u6027\u8d70\u5411\u7f6a\u6076\u7684\u6df1\u6e0a\uff0c\u8fd8\u662f\u4e00\u6b65\u6b65\u88ab\u6b63\u4e49\u63a8\u5411\u5149\u660e\u7684\u5f7c\u5cb8\uff0c\u4f46\u73b0\u5b9e\u5f80\u5f80\u2026\u2026&#34;,&#34;obj_tag&#34;:[&#34;\u90fd\u5e02&#34;,&#34;\u60ac\u7591&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;5631401&#34;,&#34;owner_name&#34;:&#34;\u5e1d\u7edd\u6b87&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_5631401_d3ecdf13a84f4f2a8cadd908b433f849.jpg&#34;}},{&#34;obj_id&#34;:&#34;3535801&#34;,&#34;obj_type&#34;:6,&#34;obj_name&#34;:&#34;\u8d30\u62fe\u634c\uff1a\u5bbf\u661f\u52ab&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_6514709_3578d4d634fd4122820c220173eb397e.jpg&#34;,&#34;obj_desc&#34;:&#34;\u5f88\u4e45\u4ee5\u524d\uff0c\u9ed1\u6697\u52bf\u529b\u81ea\u897f\u5317\u800c\u6765\uff0c\u767e\u59d3\u6c11\u4e0d\u804a\u751f\uff0c\u56db\u5927\u795e\u4e0e\u5bbf\u795e\u517d\u4e3a\u5e73\u5b9a\u6218\u4e71\u9677\u5165\u6c89\u7761\uff0c\u51e0\u767e\u5e74\u540e\uff0c\u9ed1\u6697\u52bf\u529b\u518d\u5ea6\uff0c\u8fd9\u65f6\u56db\u5927\u795e\u517d\u7684\u4e8c\u5341\u516b\u5b88\u62a4\u6bc5\u7136\u4e0b\u51e1\u6258\u751f\uff0c\u552f\u6709\u96c6\u7ed3\u4e8c\u5341\u516b\u661f\u5bbf\u4e4b\u5fc3\u529b\u65b9\u80fd\u5524\u9192\u795e\u517d\u548c\u5bbf\u795e\uff0c\u5728\u77e5\u6653\u81ea\u5df1\u4f7f\u547d\u540e\uff0c\u4ed6\u4eec\u662f\u5426\u80fd\u4e0d\u8d1f\u4f17\u671b\uff1f&#34;,&#34;obj_tag&#34;:[&#34;\u4ed9\u4fa0&#34;,&#34;\u5947\u5e7b&#34;,&#34;\u53e4\u98ce&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;6514709&#34;,&#34;owner_name&#34;:&#34;\u516c\u5b50\u6653\u6d6a@\u6ca7\u4e91\u6b22Fiona&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_6514709_139acf782c23400f9de3d7847eb4c3ff.jpg&#34;}},{&#34;obj_id&#34;:&#34;3744&#34;,&#34;obj_type&#34;:17,&#34;obj_name&#34;:&#34;\uff08\u7f13\u66f4\uff09\u8ffd\u68a62&#34;,&#34;obj_img&#34;:&#34;app\/cover\/template\/images\/cover_template_447578_30492c0d1bfa4519ac9fa1072a0dfa05.jpg&#34;,&#34;obj_desc&#34;:&#34;\u65af\u8482\u5170\u534e\u4ea6\u662f\u9b54\u6cd5\u5b66\u9662\uff0c\u66f4\u662f\u4f60\u91cd\u751f\u7684\u8d77\u70b9\u2026\u2026\n\u5df2\u6388\u6743\u7ed9\u5c0f\u665a\u513f&#34;,&#34;obj_tag&#34;:[&#34;\u90fd\u5e02&#34;,&#34;\u60ac\u7591&#34;,&#34;\u5947\u5e7b&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;447578&#34;,&#34;owner_name&#34;:&#34;GZ\u65e0\u6240\u8c13&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_447578_edee35efd9b740baa005bb229eea9adc.jpg&#34;}}]},{&#34;target_id&#34;:&#34;33428&#34;,&#34;target_url&#34;:&#34;&#34;,&#34;name&#34;:&#34;\u6b8a\u65f6\u5f15\u3010\u60f3\u597d\u518d\u8fdb\u3011&#34;,&#34;title_image&#34;:&#34;app\/users\/channel_cover\/channel_cover_user_id_2289894_b1007465fc23362afd312a2ae7027468.jpg&#34;,&#34;tag&#34;:2,&#34;category&#34;:13,&#34;display&#34;:{&#34;column&#34;:2,&#34;row&#34;:2,&#34;border&#34;:1},&#34;update&#34;:{&#34;content_num&#34;:&#34;&#34;,&#34;recommend_new&#34;:0},&#34;content_list&#34;:[{&#34;obj_id&#34;:&#34;792287&#34;,&#34;obj_type&#34;:14,&#34;obj_name&#34;:&#34;\u4ee3\u53f7048\u3010\u66f4\u65b0\u3011&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_10831816_7b3d0a2bdc3e41458667450daec42a3c.jpg&#34;,&#34;obj_desc&#34;:&#34;\u2014\u2014\u6211\u662f048\u53f7\uff0c\u963f\u5b87\u3002\u4f60\u662f\u8c01\uff1f\n\u2014\u2014\u6211\u2026\u2026\u662f\u4f60\u7684\u4efb\u52a1\uff0c\u5927\u9b54\u738b\u54e5\u65af\u62c9\u2026\u2026&#34;,&#34;obj_tag&#34;:[&#34;\u60ac\u7591&#34;,&#34;\u79d1\u5e7b&#34;,&#34;\u540c\u4eba&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;10831816&#34;,&#34;owner_name&#34;:&#34;\u665a\u98ce\u604b\u6708\u5149\u2661yu&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_10831816_8ae93069144f45d6914bceee2a9d7253.jpg&#34;}},{&#34;obj_id&#34;:&#34;245280&#34;,&#34;obj_type&#34;:14,&#34;obj_name&#34;:&#34;\u604b\u6a31&#34;,&#34;obj_img&#34;:&#34;app\/users\/pic\/pic_10443235_30ccbbd0e73b3d1d448c8518a2c30ef9.jpg&#34;,&#34;obj_desc&#34;:&#34;\u4f60\u76f8\u4fe1\uff0c\u6240\u8c13\u7684\u2026\u4e00\u89c1\u949f\u60c5\u5417\uff1f\n\u3010\u5c01\u9762\u611f\u8c22\u6674\u6674(\u02ca\u02d8\u02cb*)\u2661\u3011&#34;,&#34;obj_tag&#34;:[&#34;\u604b\u7231&#34;,&#34;\u90fd\u5e02&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;10443235&#34;,&#34;owner_name&#34;:&#34;\u6e05\u5e7d\u788e\u6708&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_10443235_5c0029eaafe64a3b9945c5b813258480.jpg&#34;}},{&#34;obj_id&#34;:&#34;558088&#34;,&#34;obj_type&#34;:14,&#34;obj_name&#34;:&#34;\u9ed1\u8272\u7684\u732b\u54aa&#34;,&#34;obj_img&#34;:&#34;app\/users\/pic\/pic_9424121_2b98d3cfa3f5eea0318820f70ccfe71c.jpg&#34;,&#34;obj_desc&#34;:&#34;\u3010\u6697\u591c\u7684\u4f60\uff0c\u7425\u73c0\u822c\u7684\u773c\u77b3\u3011\n\u3010\u60f3\u6293\u4f4f\u4f60\uff0c\u5c31\u7b97\u2026\u2026\u4f60\u4f1a\u628a\u6211\u63a8\u5165\u6df1\u6e0a\u3011\n\u504f\u5411\u6b27\u5f0f\u5938\u5f20\u8a00\u8bed\u98ce\u3002&#34;,&#34;obj_tag&#34;:[&#34;\u604b\u7231&#34;,&#34;\u5947\u5e7b&#34;,&#34;\u7a7f\u8d8a&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;9424121&#34;,&#34;owner_name&#34;:&#34;\u8086\u840c&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_9424121_5c2170d50eb04c13a19908413bf78b80.jpg&#34;}},{&#34;obj_id&#34;:&#34;170824&#34;,&#34;obj_type&#34;:17,&#34;obj_name&#34;:&#34;\u6cea\u82b1\u763e&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_22940305_2b9f16fe4989496e976c925eac6577cf.jpg&#34;,&#34;obj_desc&#34;:&#34;\u547d\u76f8\u514b\uff0c\u83ab\u76f8\u89c1\u3002\n\u5fc3\u76f8\u5370\uff0c\u83ab\u76f8\u604b\u3002\n\u7ec8\u4e0d\u6094\uff0c\u60c5\u96be\u65ad\uff0c\u6cea\u6210\u763e\u3002\uff08\u975e\u5144\u59b9\u604b\u7684\u8650\u604b\u60c5\u4ec7\uff09\n\u3010\u5df2\u4e0e\u6709\u5355\u5927\u4f6c\u5408\u4f5c\u6f2b\u753b\u7248\u3011&#34;,&#34;obj_tag&#34;:[&#34;\u604b\u7231&#34;,&#34;\u5947\u5e7b&#34;,&#34;\u53e4\u98ce&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;22940305&#34;,&#34;owner_name&#34;:&#34;\u5361\u5361\u679c&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/tem_1521603122064.jpg&#34;}}]},{&#34;target_id&#34;:&#34;72920&#34;,&#34;target_url&#34;:&#34;&#34;,&#34;name&#34;:&#34;\u5982\u68cb&#34;,&#34;title_image&#34;:&#34;app\/users\/channel_cover\/channel_cover_user_id_5581220_62cbbb219f4f89a6d3b2d4ee83cae01d.jpg&#34;,&#34;tag&#34;:2,&#34;category&#34;:13,&#34;display&#34;:{&#34;column&#34;:1,&#34;row&#34;:4,&#34;border&#34;:1},&#34;update&#34;:{&#34;content_num&#34;:&#34;&#34;,&#34;recommend_new&#34;:0},&#34;content_list&#34;:[{&#34;obj_id&#34;:&#34;5339115&#34;,&#34;obj_type&#34;:6,&#34;obj_name&#34;:&#34;\u5c0a\u8d35\u7684\u5a07\u513f&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_31066740_e3a350da93a44757b68b56e7e28ae9fc.jpg&#34;,&#34;obj_desc&#34;:&#34;\u6211\u9009\u62e9\u8ba9\u81ea\u5df1\u597d\u8fc7\u3002&#34;,&#34;obj_tag&#34;:[&#34;\u7075\u5f02&#34;,&#34;\u6821\u56ed&#34;,&#34;\u90fd\u5e02&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;31066740&#34;,&#34;owner_name&#34;:&#34;\u4e0a\u5b98\u79bb\u503e&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_31066740_f78d15c3378c44eeb8a4aeedf92abb1a.jpg&#34;}},{&#34;obj_id&#34;:&#34;1213273&#34;,&#34;obj_type&#34;:6,&#34;obj_name&#34;:&#34;\u6728\u69ff\u6614\u5e74\uff08\u95f2\u66f4\uff09&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_906569_968bb52bcb78413da3c9aa928384c38c.jpg&#34;,&#34;obj_desc&#34;:&#34;\u5728\u4f60\u7684\u8bb0\u5fc6\u4e2d\u6709\u6ca1\u6709\u4e00\u4e2a\u5f88\u559c\u6b22\u7684\u4eba\uff08\u5b58\u5728\u771f\u5b9e\u6545\u4e8b\uff09&#34;,&#34;obj_tag&#34;:[&#34;\u604b\u7231&#34;,&#34;\u6821\u56ed&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;906569&#34;,&#34;owner_name&#34;:&#34;\u5357\u5947&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_906569_985d361155b5412496be735a69d04616.jpg&#34;}},{&#34;obj_id&#34;:&#34;218866&#34;,&#34;obj_type&#34;:14,&#34;obj_name&#34;:&#34;\u50cf\u7d20\u4e16\u754c&#34;,&#34;obj_img&#34;:&#34;app\/cover\/template\/images\/cover_template_3477704_64a51e80740a4e1c81b2e6e6c33b4c76.jpg&#34;,&#34;obj_desc&#34;:&#34;2222\u5e74\uff0c2.2\u6b21\u5143\u7684\u4e16\u754c\uff0c\u65e0\u7231\u65e0\u6068\u65e0\u8c0e\u8a00\u7684\u4e16\u754c\u3002\uff08\u8bc4\u8bba\u7559\u4e0b\u4f60\u7684\u5efa\u8bae\uff0c\u4e0d\u5b9a\u671f\u53d1\u653e\u771f\u5fc3\u7c89\u798f\u5229\u3002\uff09&#34;,&#34;obj_tag&#34;:[&#34;\u79d1\u5e7b&#34;,&#34;\u6e38\u620f&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;3477704&#34;,&#34;owner_name&#34;:&#34;mg\u83ab\u602a&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_3477704_df632e5718b04ee0859bb16338ecfdde.jpg&#34;}},{&#34;obj_id&#34;:&#34;4054969&#34;,&#34;obj_type&#34;:6,&#34;obj_name&#34;:&#34;\u6211\u7684\u4f59\u751f\uff0c\u4e0e\u4f60\u65e0\u5173&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_21324505_0fb8129c8b384394aaa13aeb12409d35.jpg&#34;,&#34;obj_desc&#34;:&#34;\u4f60\u8eab\u8fb9\u7684\u90a3\u4e2a\u8fc7\u5ba2\uff0c\n\u4f60\u66fe\u9519\u8fc7\u7684\u7eaf\u7cb9\u7231\u60c5\uff0c\n\u559c\u6b22\u4f60\u662f\u6211\u6700\u6df1\u7684\u4e0d\u5b89\n\u559c\u6b22\u662f\u59cb\u6599\u672a\u53ca\u7684\u6b22\u6109\n\u4e0d\u559c\u6b22\u662f\u4e07\u7269\u5982\u5e38\u7684\u547d\u7406.\n\u3010\u77ed\u7bc7\u6f2b\u753b\u5408\u96c6\u3011\n\u7b2c\u4e00\u7bc7\uff1a\u300a\u65af\u6587\u8d25\u7c7b\u300b\u90fd\u5e02\u803d\u7f8e\u3010\u5b8c\u7ed3\u3011\n\u7b2c\u4e8c\u7bc7\uff1a\u300a\u5351\u5fae\u5230\u5c18\u57c3\u91cc\u300b\u90fd\u5e02\u7eaf\u7231\u3010\u8fde\u8f7d\u4e2d\u3011\n\u7b2c\u4e09\u7bc7\uff1a\u300a\u5c71\u6cb3\u5982\u753b\u76f8\u9022\u300b\u53e4\u98ce\u803d\u7f8e\u3010\u5f85\u5f00\u3011\n\u7b2c\u56db\u7bc7\uff1a\u300a\u9501\u6885\u5bab\u300b\u53e4\u98ce\u7eaf\u7231\u3010\u5f85\u5f00\u3011\n\u7b2c\u4e94\u7ae0\uff1a\u300a\u8d4e\u7f6a\u7684\u7f94\u7f8a\u300b\u5fb7\u53e4\u62c9\u803d\u7f8e\u3010\u5f85\u5f00\u3011&#34;,&#34;obj_tag&#34;:[&#34;\u604b\u7231&#34;,&#34;\u6cbb\u6108&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;21324505&#34;,&#34;owner_name&#34;:&#34;\u6709\u732b\u817b\u7684\u732b\u53d4&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_21324505_15f4bc7f701a4bde85ba9459619600a7.jpg&#34;}}]},{&#34;target_id&#34;:&#34;31240&#34;,&#34;target_url&#34;:&#34;&#34;,&#34;name&#34;:&#34;\u7cbe\u7075\u9891\u9053\u3010\u62d2\u9000\u3011&#34;,&#34;title_image&#34;:&#34;app\/users\/channel_cover\/channel_cover_user_id_800803_efed6ef0d0c0251188f9219baad1028f.jpg&#34;,&#34;tag&#34;:2,&#34;category&#34;:13,&#34;display&#34;:{&#34;column&#34;:2,&#34;row&#34;:2,&#34;border&#34;:1},&#34;update&#34;:{&#34;content_num&#34;:&#34;&#34;,&#34;recommend_new&#34;:0},&#34;content_list&#34;:[{&#34;obj_id&#34;:&#34;5243649&#34;,&#34;obj_type&#34;:6,&#34;obj_name&#34;:&#34;\u5954\u73b0\u5427!\u60c5\u7f18\uff08\u7f51\u6e38\uff09&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_19312099_f2f7c46b5ded4292805c08b497ee4ac2.jpg&#34;,&#34;obj_desc&#34;:&#34;\u201c\u6211\uff0c\u4e0d\u60f3\u53ea\u505a\u4f60\u6e38\u620f\u4e2d\u7684\u60c5\u7f18\u4e86\uff0c\u6211\u60f3\u6210\u4e3a\u4f60\u2026\u2026\u73b0\u5b9e\u4e2d\u7684\u604b\u4eba\u3002\u201d\u65e0\u8bba\u73b0\u5b9e\uff0c\u65e0\u8bba\u6e38\u620f\uff0c\u6211\u4e00\u5fc3\u559c\u6b22\u7684\uff0c\u53ea\u6709\u4f60\u3002&#34;,&#34;obj_tag&#34;:[&#34;\u90fd\u5e02&#34;,&#34;\u604b\u7231&#34;,&#34;\u6b66\u4fa0&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;19312099&#34;,&#34;owner_name&#34;:&#34;\u4f0a\u829d\u96ea\u72d0@\u5fd9\u6b7b\u4e86&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_19312099_313e04eae24c4ad49fae393696544f32.jpg&#34;}},{&#34;obj_id&#34;:&#34;6490160&#34;,&#34;obj_type&#34;:6,&#34;obj_name&#34;:&#34;\u6211\u4eec\u7684\u660e\u5929\uff08\u5148\u751c\u540e\u8650\uff09&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_4146441_8a4f3e3029934df5a8fb7fc3ce5b1996.jpg&#34;,&#34;obj_desc&#34;:&#34;\u613f\u4f60\u8d70\u51fa\u534a\u751f\uff0c\u5f52\u6765\u4ecd\u662f\u5c11\u5e74\u3002\u300e\u5468\u672b\u66f4\u65b0\u300f&#34;,&#34;obj_tag&#34;:[&#34;\u6821\u56ed&#34;,&#34;\u604b\u7231&#34;,&#34;\u90fd\u5e02&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;4146441&#34;,&#34;owner_name&#34;:&#34;\u767d\u5341\u4e09\u2661&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_4146441_a1e1b20ae1724cf7b6a78d5efd5941ca.jpg&#34;}},{&#34;obj_id&#34;:&#34;6488395&#34;,&#34;obj_type&#34;:6,&#34;obj_name&#34;:&#34;\u68a6\u4e2d\u5f71&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_17555203_387bedf451fc408aae02509e17d55bc4.jpg&#34;,&#34;obj_desc&#34;:&#34;\u6211\u7684\u68a6\u91cc\u6709\u4f60\u2026\u2026\uff08\u6162\u70ed+\u8650\uff09                                                                      \u81f4\u6c38\u8fdc\u6c89\u7761\u7684\u4f60\u3002                                                                        \u3010\u4f5c\u8005:\u964c\u7af9\u3011&#34;,&#34;obj_tag&#34;:[&#34;\u604b\u7231&#34;,&#34;\u6cbb\u6108&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;17555203&#34;,&#34;owner_name&#34;:&#34;\u964c\u7af9.&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_17555203_3abc31c116f64e51bc4ba4a423b06bdc.jpg&#34;}},{&#34;obj_id&#34;:&#34;2913863&#34;,&#34;obj_type&#34;:6,&#34;obj_name&#34;:&#34;\u3010\u7206\u7b11\u3011\u603b\u88c1\u60f3\u8131\u5355&#34;,&#34;obj_img&#34;:&#34;app\/users\/group_title_image\/works_serial_2732856_ac2e280d2b4b4ff687b3ed61db97485f.jpg&#34;,&#34;obj_desc&#34;:&#34;\u7537\u5973\u4e3b\u7684\u7206\u7b11\u65e5\u5e38\u300e\u5c01\u9762:\u8336\u5927\u798f\u300f\u300e\u5185\u5c01:\u660e\u65e5\u300f&#34;,&#34;obj_tag&#34;:[&#34;\u7206\u7b11&#34;,&#34;\u604b\u7231&#34;,&#34;\u6821\u56ed&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;2732856&#34;,&#34;owner_name&#34;:&#34;\u72ec\u89d2\u517d\u517d(;\u2022\u0348\u0301\u0f1a\u2022\u0348\u0300)&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_2732856_63e1ca159a8a438b856a70c60ad33b51.jpg&#34;}}]},{&#34;target_id&#34;:&#34;2320&#34;,&#34;target_url&#34;:&#34;&#34;,&#34;name&#34;:&#34;\u6587\u82b3\u4e13\u9891\u3010ABC\u8054\u76df\u3011&#34;,&#34;title_image&#34;:&#34;app\/users\/channel_cover\/pic_2852146_63EF5BDB-351E-4DD1-B49A-D807A639C54A.jpg&#34;,&#34;tag&#34;:2,&#34;category&#34;:13,&#34;display&#34;:{&#34;column&#34;:1,&#34;row&#34;:4,&#34;border&#34;:1},&#34;update&#34;:{&#34;content_num&#34;:&#34;&#34;,&#34;recommend_new&#34;:0},&#34;content_list&#34;:[{&#34;obj_id&#34;:&#34;2176086&#34;,&#34;obj_type&#34;:17,&#34;obj_name&#34;:&#34;\u3010\u7b49\u5c01\u3011\u6587\u4eba\u4e8c\u4e09\u5f04&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_32003533_9b64d3f237eb4270ae9665a75cd210f6.jpg&#34;,&#34;obj_desc&#34;:&#34;\u3010\u5df2\u7ecf\u6388\u6743\u4e0e\u56db\u6708\u5c81\u5bd2\u5408\u4f5c\u3011\u6587\u4eba\u5c71\u91cc\u7684\u65e5\u5e38\u6709\u90a3\u4e48\u4e71\u5165\u7684\u5417\uff1f\u4e00\u7fa4\u4e2d\u4e8c\u75c5\u665a\u671f\u7684\u4f5c\u8005\u96c6\u4f53cos\u53e4\u98ce\u53c8\u662f\u4e2a\u4ec0\u4e48\u60c5\u51b5\uff1f\u597d\u7684\uff0c\u5c71\u4e3b\u5927\u4eba\u53d1\u6d3b\u4e86\u2014\u2014\u548b\u4eec\u6587\u4eba\u5c71\uff0c\u8981\u7684\u90a3\u5c31\u662f\u4e00\u4e2a\u4e0d\u4e00\u6837\uff01&#34;,&#34;obj_tag&#34;:[&#34;\u53e4\u98ce&#34;,&#34;\u540c\u4eba&#34;,&#34;\u6cbb\u6108&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;32003533&#34;,&#34;owner_name&#34;:&#34;\u5357\u8fb0\u5317\u5df7.&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_32003533_ad1c36401cd3487fa1f9605e3d363aa7.jpg&#34;}},{&#34;obj_id&#34;:&#34;1768275&#34;,&#34;obj_type&#34;:17,&#34;obj_name&#34;:&#34;\u8111\u58f3\u75db&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_24617809_8725c4cfb7584acfaad244b8f2fc11a4.jpg&#34;,&#34;obj_desc&#34;:&#34;\u83ab\u540d\u5947\u5999\u7684\u5bb6\u4f19\uff01&#34;,&#34;obj_tag&#34;:[&#34;\u90fd\u5e02&#34;,&#34;\u7a7f\u8d8a&#34;,&#34;\u7206\u7b11&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;24617809&#34;,&#34;owner_name&#34;:&#34;\u7487\u7af9\u25a0\u5f67\u8333\u79be&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_24617809_e85f429cd7484f96b4fe8b9f0cff4098.jpg&#34;}},{&#34;obj_id&#34;:&#34;3923826&#34;,&#34;obj_type&#34;:6,&#34;obj_name&#34;:&#34;\u516d\u5e74\uff0c\u6211\u7b49\u4f60&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_3432777_9c03365ac4814e6d92e9112ca11523b5.jpg&#34;,&#34;obj_desc&#34;:&#34;\u516d\u5e74\u4e4b\u540e\uff0c\u82b1\u5f00\u82b1\u843d\u2014\u2014S.X\u76db\u590f&#34;,&#34;obj_tag&#34;:[&#34;\u6821\u56ed&#34;,&#34;\u604b\u7231&#34;,&#34;\u6cbb\u6108&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;3432777&#34;,&#34;owner_name&#34;:&#34;\u266aS.X\u76db\u590f\u266c&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_3432777_e44d59affdc346fb99fb3a2892f7b2db.jpg&#34;}},{&#34;obj_id&#34;:&#34;953743&#34;,&#34;obj_type&#34;:17,&#34;obj_name&#34;:&#34;\u76f8\u601d\u8ffd&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_2517897_c35105bbf7704823b0ebcd0485ed4d93.jpg&#34;,&#34;obj_desc&#34;:&#34;\u3010\u5df2\u6388\u6743\u7ed9\u82cf\u5b50\u4e45\u4e8c\u3011\u6211\uff0c\u6708\u5343\u7434\uff0c\u4e00\u4f4d\u6821\u82b1\u7ea7\u522b\u7684\u6df1\u8d44\u5b85\u5973\u3002\u67d0\u5929\uff0c\u6211\u56e0\u4e3a\u62d2\u7edd\u4e86\u67d0\u4e2a\u670b\u53cb\u7684\u901b\u8857\u9080\u8bf7\uff0c\u5728\u5bb6\u91cc\u73a9\u6e38\u620f\uff0c\u53ea\u4e0d\u8fc7\u521b\u5efa\u4e86\u8d26\u53f7\uff0c\u6211\u5c45\u7136\u7a7f\u8d8a\u4e86\uff01\u90a3\u8bf7\u544a\u8bc9\u6211\uff0c\u6e38\u620f\u91cc\u78b0\u5230\u7684\u540c\u4f19\u662f\u4e0d\u662f\u5728\u73b0\u5b9e\u4e16\u754c\u91cc\u548c\u6211\u804a\u5929\u7684\u5582\uff01\u4e3a\u4ec0\u4e48\u6709\u4e9bNPC\u8111\u5b50\u8fd8\u4e0d\u6e05\u9192\uff01\u5582\u5582\u5582\uff0c\u6211\u662f\u4e0d\u662f\u78b0\u5230\u4e86\u5047\u7684\u7a7f\u8d8a\u554a\uff01\u50b2\u5a07\u72d0\u4ed9\u961f\u53cb\u662f\u4ec0\u4e48\u9b3c\u5566\uff01\n\u3014\u611f\u8c22\u5927\u89e6\u4eec\u7684\u5ba2\u4e32\uff0c\u8fd9\u662f\u534a\u5ba2\u4e32\u5751\u2211(\uffe3\u25a1\uffe3)\u3015&#34;,&#34;obj_tag&#34;:[&#34;\u604b\u7231&#34;,&#34;\u7a7f\u8d8a&#34;,&#34;\u53e4\u98ce&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;2517897&#34;,&#34;owner_name&#34;:&#34;\u5357\u8fb0\u5317\u5df7&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_2517897_d8906906b114462694fdbeb03c93ffef.jpg&#34;}}]},{&#34;target_id&#34;:&#34;49256&#34;,&#34;target_url&#34;:&#34;&#34;,&#34;name&#34;:&#34;\u674f\u6797\u4f1a&#34;,&#34;title_image&#34;:&#34;app\/users\/channel_cover\/pic_13583714_3E4690EC-7AC8-4B4B-9CB3-D50759CA9F9E.jpg&#34;,&#34;tag&#34;:2,&#34;category&#34;:13,&#34;display&#34;:{&#34;column&#34;:2,&#34;row&#34;:2,&#34;border&#34;:1},&#34;update&#34;:{&#34;content_num&#34;:&#34;&#34;,&#34;recommend_new&#34;:0},&#34;content_list&#34;:[{&#34;obj_id&#34;:&#34;44993&#34;,&#34;obj_type&#34;:17,&#34;obj_name&#34;:&#34;\u4f60\u6015\u9ed1\u6211\u662f\u5149&#34;,&#34;obj_img&#34;:&#34;app\/avg\/cover\/titles\/title_avg_cover_8149549_19e687048b814a4183859aa5c406d3c9.jpg&#34;,&#34;obj_desc&#34;:&#34;\u5f53\u4f60\u5bb3\u6015\u9ed1\u6697\u7684\u65f6\u5019\uff0c\u575a\u5f3a\u4f1a\u50cf\u5149\u4e00\u6837\u5b88\u62a4\u4f60\u3002\n\u60ac\u7591\u4e2d\u7684\u6cbb\u6108\u7cfb\u4e0d\u77e5\u80fd\u5426\u6253\u52a8\u4f60\u7684\u5fc3\uff1f&#34;,&#34;obj_tag&#34;:[&#34;\u60ac\u7591&#34;,&#34;\u5947\u5e7b&#34;,&#34;\u6cbb\u6108&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;8149549&#34;,&#34;owner_name&#34;:&#34;\u5b89\u7238&amp;\u6f5c\u5fc3\u7814\u4e60&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_8149549_d83201128243483e9692e8e9b0ff5c95.jpg&#34;}},{&#34;obj_id&#34;:&#34;836966&#34;,&#34;obj_type&#34;:17,&#34;obj_name&#34;:&#34;\u5feb\u7a7f\u4e4b\u5d29\u574f\u7684NPC&#34;,&#34;obj_img&#34;:&#34;app\/avg\/cover\/titles\/title_avg_cover_8632718_56abff9df5574550b20e7d4dfa882822.jpg&#34;,&#34;obj_desc&#34;:&#34;\u3010\u7b2c\u4e00\u4e2a\u6e38\u620f\u4e16\u754c\u2014\u2014\u738b\u8005\u8363\u8000\u3011\u8eab\u4e3a21\u4e16\u7eaa\u7684\u65b0\u65b0\u5b85\u5973\uff0c\u6211\u514b\u5df1\u5949\u516c\uff0c\u52e4\u4fed\u8282\u7ea6\uff0c\u70ed\u7231\u7956\u56fd\u2026\u2026\u6240\u4ee5\uff0c\u4e3a\u4ec0\u4e48\u6211\u4f1a\u7a7f\u8d8a\u5230\u6e38\u620f\u91cc\uff1f\n\u7a7f\u5230\u6e38\u620f\u91cc\u4e5f\u5c31\u7b97\u4e86\uff0c\u4e3a\u4ec0\u4e48\u6211\u4f1a\u662fNPC\uff1f\uff01\n\u597d\u5427\uff0cNPC\u4e5f\u5c31\u7b97\u4e86\uff0c\u4f60\u7684\u8fd9\u4e9b\u4efb\u52a1\u53c8\u662f\u4ec0\u4e48\u9b3c\uff1f\uff01&#34;,&#34;obj_tag&#34;:[&#34;\u7206\u7b11&#34;,&#34;\u540c\u4eba&#34;,&#34;\u6e38\u620f&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;8632718&#34;,&#34;owner_name&#34;:&#34;\u5979\u4e0e\u6708\u5149\u4e3a\u90bb&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/tem_1509180092202.jpg&#34;}},{&#34;obj_id&#34;:&#34;95&#34;,&#34;obj_type&#34;:17,&#34;obj_name&#34;:&#34;\u503e\u57ce\u8c0b\u5983\u2160&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_5345508_76aa149b89df4bc98daf10326653aa81.jpg&#34;,&#34;obj_desc&#34;:&#34;\u4e1e\u76f8\u5bb6\u4e09\u5c0f\u59d0\u9003\u5a5a\u5728\u5916\uff0c\u8bef\u5165\u6218\u573a\uff0c\u6551\u4eb2\u738b\uff0c\u6536\u7f8e\u7537\uff0c\u732e\u8ba1\u8c0b\uff0c\u6210\u5c31\u503e\u4e16\u59fb\u7f18\u3002&#34;,&#34;obj_tag&#34;:[&#34;\u604b\u7231&#34;,&#34;\u53e4\u98ce&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;5345508&#34;,&#34;owner_name&#34;:&#34;\u891a\u7396\u9edb&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_5345508_93ac8299bba24c49af4d960a4d4c5c2d.jpg&#34;}},{&#34;obj_id&#34;:&#34;621635&#34;,&#34;obj_type&#34;:17,&#34;obj_name&#34;:&#34;\u81e7\u7075\u751f\u82b1&#34;,&#34;obj_img&#34;:&#34;app\/avg\/cover\/titles\/title_avg_cover_5345508_bf7c2d918e6d4ccdad8d76b01038dbd1.jpg&#34;,&#34;obj_desc&#34;:&#34;\u836f\u738b\u5934\u9876\u4e00\u679d\u82b1\uff0c\u547d\u91cc\u7ec8\u7a76\u6ca1\u6709\u4ed6\uff0c\u4e24\u91cd\u5e08\u5f92\u4e24\u91cd\u604b\uff0c\u60c5\u5f52\u7ec8\u5904\u6b7b\u751f\u82b1\u3002&#34;,&#34;obj_tag&#34;:[&#34;\u604b\u7231&#34;,&#34;\u4ed9\u4fa0&#34;,&#34;\u53e4\u98ce&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;5345508&#34;,&#34;owner_name&#34;:&#34;\u891a\u7396\u9edb&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_5345508_93ac8299bba24c49af4d960a4d4c5c2d.jpg&#34;}}]},{&#34;target_id&#34;:&#34;2106&#34;,&#34;target_url&#34;:&#34;&#34;,&#34;name&#34;:&#34;\u5fc6\u53a2\u3010ABC\u8054\u76df\u3011&#34;,&#34;title_image&#34;:&#34;app\/users\/channel_cover\/channel_cover_user_id_2104911_29510bbd2412ac5a79e13b71753dfcb6.jpg&#34;,&#34;tag&#34;:2,&#34;category&#34;:13,&#34;display&#34;:{&#34;column&#34;:1,&#34;row&#34;:4,&#34;border&#34;:1},&#34;update&#34;:{&#34;content_num&#34;:&#34;&#34;,&#34;recommend_new&#34;:0},&#34;content_list&#34;:[{&#34;obj_id&#34;:&#34;333435&#34;,&#34;obj_type&#34;:14,&#34;obj_name&#34;:&#34;\u7389\u8776&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_6465085_0e9fda2ac8cb4984a06063a1887f8efa.jpg&#34;,&#34;obj_desc&#34;:&#34;\u5728\u8fd9\u4ee5\u6743\u4e3a\u5c0a\u7684\u4e16\u754c\u91cc\uff0c\u6bcf\u4e00\u6b65\u90fd\u5145\u6ee1\u4e86\u5371\u9669\uff0c\u770b\u8fd9\u4f4d\u5929\u771f\u65e0\u90aa\u7684\u5c11\u5973&#34;,&#34;obj_tag&#34;:[&#34;\u604b\u7231&#34;,&#34;\u4ed9\u4fa0&#34;,&#34;\u6cbb\u6108&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;6465085&#34;,&#34;owner_name&#34;:&#34;\u3010G.M\u3011\u51b0\u6e05\u7389\u8776\u3010\u6682\u9000\u3011&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_6465085_3f0f2d95608f41e3a20cc16938d920ab.jpg&#34;}},{&#34;obj_id&#34;:&#34;8148025&#34;,&#34;obj_type&#34;:6,&#34;obj_name&#34;:&#34;\u4e8b\u5230\u5982\u4eca&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_23243909_e5edb73d142a481089329e2642482be8.jpg&#34;,&#34;obj_desc&#34;:&#34;\u4e8b\u5230\u5982\u4eca\uff0c\u6211\u8fd8\u662f\u5f88\u559c\u6b22\u4f60\uff0c\u5fc3\u5fc3\u5ff5\u5ff5\u662f\u4f60\uff0c\u9b42\u7275\u68a6\u7ed5\u662f\u4f60\uff0c\u4e3a\u4f60\u5fc3\u6f6e\u6f8e\u6e43\uff0c\u56e0\u4f60\u671f\u5f85\u672a\u6765\u3002&#34;,&#34;obj_tag&#34;:[&#34;\u6821\u56ed&#34;,&#34;\u604b\u7231&#34;,&#34;\u90fd\u5e02&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;23243909&#34;,&#34;owner_name&#34;:&#34;\u6cef\u7b19.\u79ef\u6781\u6269\u5217&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_23243909_f7b92caf77b34fc9943e7466136c7fc9.jpg&#34;}},{&#34;obj_id&#34;:&#34;6049659&#34;,&#34;obj_type&#34;:6,&#34;obj_name&#34;:&#34;\u7537\u53cb\u662f\u53ea\u732b&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_25599200_0b987e683e5f40438d177078495f2fb0.jpg&#34;,&#34;obj_desc&#34;:&#34;\u4ece\u5f02\u4e16\u754c\u6765\u5230\u7684\u732b\u8033\u738b\u5b50\uff0c\u6765\u5230\u540e\u53d8\u6210\u5c0f\u732b\uff0c\u88ab\u4e00\u4e2a\u5c0f\u5973\u5b69\u513f\u7ed9\u6361\u5230\u6536\u517b\u4e86\uff0c\u540e\u6765\u624d\u53d1\u73b0\u5b83\u7adf\u7136\u662f\u4e2a\u5c0f\u54e5\u54e5\uff01(\u6bcf\u5468\u4e09\u66f4)&#34;,&#34;obj_tag&#34;:[&#34;\u604b\u7231&#34;,&#34;\u5947\u5e7b&#34;,&#34;\u6821\u56ed&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;25599200&#34;,&#34;owner_name&#34;:&#34;\u4f59\u7b71\u828a&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_25599200_5eab6d27ef7a44bcaa4c980b85ebc12a.jpg&#34;}},{&#34;obj_id&#34;:&#34;833086&#34;,&#34;obj_type&#34;:17,&#34;obj_name&#34;:&#34;\u7af9\u9a6c&lt;\u91cd\u4fee&gt;&#34;,&#34;obj_img&#34;:&#34;app\/comics\/bgs\/title_avg_custom_30373924_9a0eee9acb8f4fa5870507e87ce49f01.jpg&#34;,&#34;obj_desc&#34;:&#34;\u7b80\u4ecb\uff1a\n\u767d\u5bb6\u662f\u4e2a\u79f0\u9738\u56fd\u5185\u5916\u7684\u4e00\u5bb6\u4f01\u4e1a\u3002\u767d\u5bb6\u5bb6\u4e3b\u767d\u4f01\u6d69\u4e4b\u5973\u767d\u82b7\u6674\u4e0e\u90c1\u5bb6\u4e4b\u5b50\u90c1\u767d\u662f\u4e00\u5bf9\u9752\u6885\u7af9\u9a6c\u3002\u53ef\u662f\u2026\u2026\u4ed6\u4eec\u60f3\u5728\u4e00\u8d77\u662f\u591a\u4e48\u7684\u96be\u2026\u2026\n\u8fb0\u5c0f\u7483\u7684\u5201\u96be\u3001\u897f\u95e8\u6d69\u4e0e\u767d\u82b7\u6674\u7684\u5a5a\u7ea6\u3001\u7eaa\u767d\u7684\u7ea0\u7f20\u3001\u90fd\u662f\u4ed6\u4eec\u5728\u4e00\u8d77\u7684\u91cd\u91cd\u56f0\u96be\u2026\u2026&#34;,&#34;obj_tag&#34;:[&#34;\u604b\u7231&#34;,&#34;\u90fd\u5e02&#34;,&#34;\u6cbb\u6108&#34;],&#34;obj_owner&#34;:{&#34;owner_id&#34;:&#34;30373924&#34;,&#34;owner_name&#34;:&#34;\u82b7\u5bd2@\u7cbe\u4fee\u4e2d&#34;,&#34;owner_img&#34;:&#34;app\/users\/avatars\/user_avatar_30373924_888e64f52c72400a97e2b37ced44c711.jpg&#34;}}]}]}}</pre>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Validators:</h3>
+              <div style="overflow: auto">
+                  <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>eq</td>
+                      <td>200</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        headers.Content-Type
+                      </td>
+                      <td>eq</td>
+                      <td>application/json; charset=utf-8</td>
+                      <td>application/json; charset=utf-8</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.status
+                      </td>
+                      <td>eq</td>
+                      <td>ok</td>
+                      <td>ok</td>
+                    </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>38318</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>356.4</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>351.796</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        
+
+      </td>
+    </tr>
+  
+    
+    <tr id="record_1_4">
+      <th class="success" style="width:5em;">success</td>
+      <td colspan="2">sync</td>
+      <td style="text-align:center;width:6em;">78.0 ms</td>
+      <td class="detail">
+
+        <a class="button" href="#popup_log_1_4">log</a>
+        <div id="popup_log_1_4" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_4">&times;</a>
+
+            <div class="content">
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          http://api.chumanapp.com/secure/?a=sync&m=Api&version=4&c=App
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>body</th>
+                      <td>
+                        
+                          None
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>start_timestamp</th>
+                      <td>
+                        
+                          1539505894.9787767
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          GET
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>mauthorization</strong>: 0b379ed3f4f361a68859dece9ee632fe:5f0419b79f4fd4fe041772f658cc7c7b:hbJH2M/B1xGu07voeuloF0hQArQ=
+                          </div>
+                          
+                          <div>
+                            <strong>versioncode</strong>: android_4.6.8
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>user-agent</strong>: okhttp/3.10.0
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>params</th>
+                      <td>
+                        
+                          {'a': 'sync', 'm': 'Api', 'version': '4', 'c': 'App'}
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            http://api.chumanapp.com/secure/?a=sync&m=Api&version=4&c=App
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Date</strong>: Sun, 14 Oct 2018 08:31:38 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>X-Powered-By</strong>: PHP/5.5.9-1ubuntu4.25
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Encoding</strong>: gzip
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: application/json; charset=utf-8
+                            </div>
+                            
+                            <div>
+                              <strong>Transfer-Encoding</strong>: chunked
+                            </div>
+                            
+                            <div>
+                              <strong>Vary</strong>: Accept-Encoding
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                        
+                      
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                        
+                      
+                      <tr>
+                        <th>content</th>
+                        <td>
+                          
+                            
+                              <pre>{&#34;status&#34;:&#34;ok&#34;,&#34;message&#34;:{&#34;key&#34;:&#34;&#34;,&#34;message&#34;:&#34;\u64cd\u4f5c\u6210\u529f&#34;},&#34;data&#34;:{&#34;achievements&#34;:{},&#34;day_num&#34;:&#34;1&#34;,&#34;awardlist&#34;:[{&#34;res_type&#34;:&#34;2&#34;,&#34;res_value&#34;:&#34;20&#34;},{&#34;res_type&#34;:&#34;2&#34;,&#34;res_value&#34;:&#34;20&#34;},{&#34;res_type&#34;:&#34;2&#34;,&#34;res_value&#34;:&#34;20&#34;},{&#34;res_type&#34;:&#34;2&#34;,&#34;res_value&#34;:&#34;20&#34;},{&#34;res_type&#34;:&#34;2&#34;,&#34;res_value&#34;:&#34;20&#34;},{&#34;res_type&#34;:&#34;2&#34;,&#34;res_value&#34;:&#34;20&#34;},{&#34;res_type&#34;:&#34;0&#34;,&#34;res_value&#34;:&#34;0&#34;}],&#34;secret_gift_list&#34;:[{&#34;res_type&#34;:&#34;2&#34;,&#34;res_value&#34;:&#34;50&#34;},{&#34;res_type&#34;:&#34;1&#34;,&#34;res_value&#34;:&#34;1&#34;},{&#34;res_type&#34;:&#34;1&#34;,&#34;res_value&#34;:&#34;2&#34;}],&#34;chuman_day&#34;:97,&#34;user_lang&#34;:&#34;zh-hans&#34;,&#34;this_theme&#34;:0,&#34;next_theme&#34;:0,&#34;new_package_out&#34;:0,&#34;new_package_in&#34;:1,&#34;new_spdiy_in&#34;:1,&#34;new_spdiy_out&#34;:1,&#34;vip_info&#34;:{&#34;privilege_num&#34;:7,&#34;clock_info&#34;:{&#34;clocked&#34;:1,&#34;res_type&#34;:1,&#34;res_value&#34;:8},&#34;box_to_vip&#34;:0},&#34;alter_wechat_trans&#34;:0,&#34;reward_question_new_IOS&#34;:0,&#34;reward_question_new_Android&#34;:0,&#34;tag_comic_flag&#34;:1,&#34;square_red_point&#34;:0,&#34;theme_new&#34;:{&#34;theme_change&#34;:0,&#34;user_background&#34;:&#34;&#34;},&#34;shop_noti&#34;:0,&#34;block_with_template&#34;:1,&#34;daily_first_sign&#34;:0,&#34;alert_award_info&#34;:{&#34;resource_type&#34;:&#34;2&#34;,&#34;resource_value&#34;:&#34;100&#34;},&#34;custom_shop_info&#34;:{}}}</pre>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Validators:</h3>
+              <div style="overflow: auto">
+                  <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>eq</td>
+                      <td>200</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        headers.Content-Type
+                      </td>
+                      <td>eq</td>
+                      <td>application/json; charset=utf-8</td>
+                      <td>application/json; charset=utf-8</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.status
+                      </td>
+                      <td>eq</td>
+                      <td>ok</td>
+                      <td>ok</td>
+                    </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>1048</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>78.0</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>89.683</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        
+
+      </td>
+    </tr>
+  
+  </table>
+  
+</body>

@@ -1,0 +1,178 @@
+[
+    {
+        "config": {
+            "name": "testset description",
+            "variables": [],
+            "request": {
+                "base_url": "http://api2.chumanapp.com",
+                "headers": {
+                    "User-Agent": "okhttp/3.10.0",
+                    "versioncode": "android_4.6.8"
+                }
+            }
+        }
+    },
+    {
+        "test": {
+            "name": "install",
+            "request": {
+                "url": "/secure/",
+                "params": {
+                    "m": "Api",
+                    "a": "install",
+                    "c": "App"
+                },
+                "method": "POST",
+                "headers": {
+                    "MAuthorization": "0b379ed3f4f361a68859dece9ee632fe::6WptCbP8y+dvT1p+VDKcPc9jipY=",
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "data": {
+                    "device_token": "860077037003271",
+                    "marketing_channel": "chuman",
+                    "device_brand": "HUAWEI",
+                    "language": "zh-hans",
+                    "device_type": "0",
+                    "device_model": "HUAWEI RIO-AL00"
+                }
+            },
+            "extract": [
+            {"token": "content.data.install_token"}
+        ],
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "application/json; charset=utf-8"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.status",
+                        "ok"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "login",
+            "request": {
+                "url": "/secure/",
+                "params": {
+                    "m": "Api",
+                    "a": "login",
+                    "c": "User"
+                },
+                "method": "POST",
+                "headers": {
+                    "MAuthorization": "0b379ed3f4f361a68859dece9ee632fe:$token:S0IA3rXGLGBbUWJ/kpX1WWhhC+E=",
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "data": {
+                    "password": "123456",
+                    "user": "188"
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "application/json; charset=utf-8"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.status",
+                        "ok"
+                    ]
+                }
+            ]
+        }
+    },
+   {
+        "test": {
+            "name": "get_subscribed_channel_list",
+            "request": {
+                "url": "/secure/?m=Api&c=HomePage&a=get_home_content_list",
+                "params": {
+                },
+                "method": "GET",
+                "headers": {
+                    "MAuthorization": "0b379ed3f4f361a68859dece9ee632fe:$token:NtnRsgFVELNuJb8U6iCkibBddtE="
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "application/json; charset=utf-8"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.status",
+                        "ok"
+                    ]
+                }
+            ]
+        }
+    },
+     {
+        "test": {
+            "name": "sync",
+            "request": {
+                "url": "/secure/",
+                "params": {
+                    "m": "Api",
+                    "version": "4",
+                    "a": "sync",
+                    "c": "App"
+                },
+                "method": "GET",
+                "headers": {
+                    "MAuthorization": "0b379ed3f4f361a68859dece9ee632fe:$token:hbJH2M/B1xGu07voeuloF0hQArQ="
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "application/json; charset=utf-8"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.status",
+                        "ok"
+                    ]
+                }
+            ]
+        }
+    }
+]
