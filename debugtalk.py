@@ -12,6 +12,6 @@ def get_token():
     print(val)
 
 
-# if __name__ == "__main__":
-#     save_token(55)
-#     get_token()
+if __name__ == "__main__":
+    save_token(55)
+    get_token()
