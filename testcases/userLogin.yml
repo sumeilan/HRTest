@@ -41,6 +41,11 @@
         -   eq:
             - content.status
             - ok
+
 -   test:
         name: login
+        setup_hooks:
+        - ${save_token($token)}
+        teardown_hooks:
+        - ${get_token()}
         api: api_v1_Account_Login_POST($UserName, $Password, $token)
