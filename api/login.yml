@@ -1,28 +1,27 @@
 - api:
-    def: api_v1_Account_Login_POST($UserName, $Password, $token)
+    def: api_v1_Account_Login_POST($User, $Password, $token)
     request:
-            data:
-                device_brand: HUAWEI
-                device_model: HUAWEI RIO-AL00
-                device_token: '860077037003271'
-                device_type: '0'
-                language: zh-hans
-                marketing_channel: chuman
-            headers:
-                Content-Type: application/x-www-form-urlencoded
-                MAuthorization: 0b379ed3f4f361a68859dece9ee632fe::6WptCbP8y+dvT1p+VDKcPc9jipY=
-                versioncode: android_4.6.8
-            method: POST
-            params:
-                a: install
-                c: App
-                m: Api
-            url: http://api2.chumanapp.com/secure/
+        url: http://api.chumanapp.com/secure/
+        method: POST
+        data:
+            user: $User
+            password: $Password
+        headers:
+            Content-Type: application/x-www-form-urlencoded
+            MAuthorization: 0b379ed3f4f361a68859dece9ee632fe:$token:S0IA3rXGLGBbUWJ/kpX1WWhhC+E=
+            versioncode: android_4.6.8
+        params:
+            a: login
+            c: User
+            m: Api
 
     validate:
         -   eq:
             - status_code
             - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json; charset=utf-8
         -   eq:
             - content.status
             - ok

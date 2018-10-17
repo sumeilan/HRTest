@@ -1,5 +1,6 @@
 -   config:
       name: testset description
+      def: install_and_login($User, $Password, $token)
       request:
           base_url: ''
           headers:
@@ -42,7 +43,7 @@
 -   test:
         name: login
         variable_binds:
-          - User: 1882
+          - User: 188
           - Password: 123456
         output:
            -User
