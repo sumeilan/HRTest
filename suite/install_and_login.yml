@@ -42,9 +42,6 @@
 
 -   test:
         name: login
-        variable_binds:
-          - User: 188
-          - Password: 123456
         output:
            -User
         setup_hooks:

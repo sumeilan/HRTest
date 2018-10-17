@@ -2,9 +2,12 @@
     name: testlogin
     parameters:
         - user: [188,1994]
+        - Password: [123456]
 
 - test:
     name: 1882
     suite: install_and_login($user, $Password, $token)
+
+
 
 
