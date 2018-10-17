@@ -2,7 +2,7 @@
     name: testlogin
     parameters:
         - user: [188,1994]
-        - Password: [123456]
+        - Password: [1234567]
 
 - test:
     name: 1882
